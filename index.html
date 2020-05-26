@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/amazon-quicksight-embedding-sdk/dist/quicksight-embedding-js-sdk.min.js" ></script>
+        <script type="text/javascript">
+            function embedDashboard() {
+                var containerDiv = document.getElementById("dashboardContainer");
+                var params = {
+                    url: "https://us-east-2.quicksight.aws.amazon.com/embed/3a54635e24d0472e8e7bcd1efe40b8ec/dashboards/38c789b2-d633-4f74-8ce1-5e44eba8727b?isauthcode=true&identityprovider=quicksight&code=AYABeCD0-R1QFHYDHvMOyvwC3sQAAAABAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTI6MjU5MzgxNDUwNDA2OmtleS8xZGQ4NmNiNy01MmE3LTQxMTItYTEyOC0zNTYzMzU0ODViZTkAuAECAQB4fn00NTgM2C_LHJYxsyNx1SjomNWwWVp51GMnAbdj9cMB-7vcDFarqRChXXs5ksblsQAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDOVryoVXRmFfdIUtawIBEIA7w5dC4a7pPGQnjqWUWMo-uythZRFp1WzGq9y78fuYEb4Ur6RKq0VBqDVwodWxyKfX9vko8NQPMWeVFaoCAAAAAAwAABAAAAAAAAAAAAAAAAAAJrzqmk_qddwdxlmh685Bmv____8AAAABAAAAAAAAAAAAAAABAAAAm9SRH8xC1hUWgK0Yuh323sexKz2RbDB8XIWFJAVOvmWj4mQ3crVM9RG9DgC_WW46B-bHCxfp3zIP4aYF5GOvGXDfYroRaZWuFfWu6vAaDgDACSLLw46LMAu4V_0hML2ZKVXSyQxiu4C-YdstGjlyGx0MRzZj2MmlyfdhVZrwc7gXLDQy-P47L1CI_wHPef1gDcOeyv8kcB-btkx3aKmu5oauEw4LI5e1UnUA_g%3D%3D",
+                    "RequestId": "a56af749-4641-45a3-9628-7babde8a9ec3",
+                    container: containerDiv,
+                    parameters: {
+                    },
+                    height: "700px",
+                    width: "1000px"
+                };
+                var dashboard = QuickSightEmbedding.embedDashboard(params);
+                dashboard.on('error', function(err) {console.log('dashboard error:', err)});
+                dashboard.on('load', function() {});
+            }
+        </script>
+</head>
+<body onload="embedDashboard()">
+    <h1>INSUFFICIENT PERMITS 05</h1>
+    <div id="dashboardContainer"></div>
+    <!-- <iframe width="1500" height="800"
+    src="https://us-east-1.quicksight.aws.amazon.com/embed/6e437821ca1c4290b9d0cc01bbf85f50/dashboards/cfbbfd9f-8665-4409-9033-021ac0c60e4c?isauthcode=true&identityprovider=quicksight&code=AYABeG8vAiUaVHpdLrfUe-AdXZoAAAABAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTE6MjU5NDgwNDYyMTMyOmtleS81NGYwMjdiYy03MDJhLTQxY2YtYmViNS0xNDViOTExNzFkYzMAuAECAQB4P-lAb3AsrVHPwO-wVCEmuFDTp0yz4wFfkrwutzPupewB35KQmpyPx3Q9wfpLFnTwTwAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDBYXK3AS4U_X_2yU3AIBEIA7436PtCpOzSGFy33iu7W2z-ojQlV5gokgl9rlHkk5a70slO-jravAHYX8s87JI41uCA4ENuRlvkpKg3ICAAAAAAwAABAAAAAAAAAAAAAAAAAAXLHfaFeZPhMpp1tmw9dLj_____8AAAABAAAAAAAAAAAAAAABAAAAm3L45uAnMswaBCjQr6_aCeMvqmCmS_UUckkpMb6zgYOJfpK2D3NqUHcsh8LfRgr5CjE5WF2jeLwHERYzlAAFEYdubcesJdrSwZs1eUEVS8TYLPsgyl-v5X7pG5ddck5vZ5IacIdX6FwtnvqFNSfLljkKn1xOpLUUb30sGibcdaTy8bxBgLRKKU_C9EmhYmc367hdj7r7tf8TPaBx_ASqOGAXa62iYPm9bXXBeA%3D%3D"
+    ></iframe> -->
+
+</body>
+</html>
