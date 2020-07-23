@@ -1,29 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updated chart</title>
-    <script src="https://unpkg.com/amazon-quicksight-embedding-sdk/dist/quicksight-embedding-js-sdk.min.js" ></script>
-        <script type="text/javascript">
-            function embedDashboard() {
-                var containerDiv = document.getElementById("dashboardContainer");
-                var params = {
-                    url: "https://us-east-2.quicksight.aws.amazon.com/embed/0a13f4096ff4478ba8b83d1dd3703873/dashboards/38c789b2-d633-4f74-8ce1-5e44eba8727b?isauthcode=true&identityprovider=quicksight&code=AYABeJi-XKxmKFXKS2regfu3OXAAAAABAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTI6MjU5MzgxNDUwNDA2OmtleS8xZGQ4NmNiNy01MmE3LTQxMTItYTEyOC0zNTYzMzU0ODViZTkAuAECAQB4fn00NTgM2C_LHJYxsyNx1SjomNWwWVp51GMnAbdj9cMB0Rvzx7ZoG1oS9qkisNITdwAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDAHHG4Y4ag8V1xrk-AIBEIA70hQqYPn5eKf-iOp9mj7SoGBaJ5IWMhclirYFr203mPCGlRgyPM3r6bVz3QvvKDlZXayRUpAp8KPC99kCAAAAAAwAABAAAAAAAAAAAAAAAAAArheir2fL2GB8WK1wc7LOOv____8AAAABAAAAAAAAAAAAAAABAAAAmymn3jPsK3DJuHekQWjUHxwfUJbcrGzB8z9V67KSkJ2hEPPI6TC-G2R1LJbjvcNu33W1goGUmQD2gysKbeltRiGhlglRQwA5WI2hKahrhxuwUGcxEaGkG3HKuvusUofVCZ9FeoWzbI1iWtX_fwa-kzEdCiMc4JjTqZLGzliDFhgaw2YtLzAF99r9GM_dLBmHDcqjS_GNfnAWyJ-fPS1gTj60GhkgoX-Na2WJtA%3D%3D",
-                    "RequestId": "670d8391-afa6-4f4b-bb72-2d096c291d53",
-                    container: containerDiv,
-                    parameters: {
-                    },
-                    height: "700px",
-                    width: "1000px"
-                };
-                var dashboard = QuickSightEmbedding.embedDashboard(params);
-                dashboard.on('error', function(err) {console.log('dashboard error:', err)});
-                dashboard.on('load', function() {});
-            }
-        </script>
-</head>
-<body onload="embedDashboard()">
+
+<body >
     <h1>INSUFFICIENT PERMITS 05</h1>
     <div id="dashboardContainer"></div>
     <!-- <iframe width="1500" height="800"
